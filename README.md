@@ -1,5 +1,5 @@
 # openCEM_examples
-Scenario Examples for openCEM v0.9.4
+Scenario Examples for openCEM v0.9.5
 
 See the `Notes` field in the `.cfg` file within each folder to obtain a description of the example.
 
