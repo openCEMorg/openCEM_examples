@@ -49,7 +49,7 @@ user=select password=select_password1 using=pymysql
 query="SELECT cap.ntndp_zone_id AS zones, cap.technology_type_id AS all_tech, avg(fuel.price) as cost_fuel
 FROM fuel_price fuel
 INNER JOIN capacity cap ON cap.id=fuel.capacity_id
-WHERE fuel.year=XXXX AND fuel.fuel_scenario_id =3
+WHERE fuel.year=XXXX AND fuel.fuel_scenario_id =5
 AND (cap.ntndp_zone_id,cap.technology_type_id) in
 [fueltechdb]
 group by zones,all_tech;" :[zones,all_tech] cost_fuel;
@@ -84,7 +84,7 @@ WHERE year=XXXX
 AND (demand_scenario_id,ntndp_zone_id, technology_type_id) in (
   SELECT MAX(demand_scenario_id), ntndp_zone_id, technology_type_id
   FROM capex
-  WHERE demand_scenario_id IN (3,1)
+  WHERE demand_scenario_id IN (5,1)
   AND (ntndp_zone_id, technology_type_id) IN
   [gentechdb]
   GROUP BY ntndp_zone_id,technology_type_id
@@ -101,7 +101,7 @@ WHERE year=XXXX
 AND (demand_scenario_id,ntndp_zone_id, technology_type_id) in (
   SELECT MAX(demand_scenario_id), ntndp_zone_id, technology_type_id
   FROM capex
-  WHERE demand_scenario_id IN (3,1)
+  WHERE demand_scenario_id IN (5,1)
   AND (ntndp_zone_id, technology_type_id) IN
   [stortechdb]
   GROUP BY ntndp_zone_id,technology_type_id
@@ -118,7 +118,7 @@ WHERE year=XXXX
 AND (demand_scenario_id,ntndp_zone_id, technology_type_id) in (
   SELECT MAX(demand_scenario_id), ntndp_zone_id, technology_type_id
   FROM capex
-  WHERE demand_scenario_id IN (3,1)
+  WHERE demand_scenario_id IN (5,1)
   AND (ntndp_zone_id, technology_type_id) IN
   [hybtechdb]
   GROUP BY ntndp_zone_id,technology_type_id
