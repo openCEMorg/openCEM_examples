@@ -1,0 +1,10 @@
+"name","zone","tech",2020,2025,2035
+"cost_gen_fom",13,1,1111,3333
+"cost_gen_fom",13,2,2222,4444,
+"cost_gen_vom",13,1,5555,7777,
+"cost_gen_vom",13,2,6666,8888,
+"cost_gen_build",12,1,,888888,777777
+"cost_stor_build",13,14,999999,888888,777777
+"cost_stor_build",5,21,2000000,2000000,2000000
+"cost_stor_fom",5,21,5000,5000,5000
+"cost_stor_vom",5,21,5,5,5
