@@ -84,7 +84,7 @@ WHERE year=XXXX
 AND (demand_scenario_id,ntndp_zone_id, technology_type_id) in (
   SELECT MAX(demand_scenario_id), ntndp_zone_id, technology_type_id
   FROM capex
-  WHERE demand_scenario_id IN (3,1)
+  WHERE demand_scenario_id IN (4,1)
   AND (ntndp_zone_id, technology_type_id) IN
   [gentechdb]
   GROUP BY ntndp_zone_id,technology_type_id
@@ -101,7 +101,7 @@ WHERE year=XXXX
 AND (demand_scenario_id,ntndp_zone_id, technology_type_id) in (
   SELECT MAX(demand_scenario_id), ntndp_zone_id, technology_type_id
   FROM capex
-  WHERE demand_scenario_id IN (3,1)
+  WHERE demand_scenario_id IN (4,1)
   AND (ntndp_zone_id, technology_type_id) IN
   [stortechdb]
   GROUP BY ntndp_zone_id,technology_type_id
@@ -118,7 +118,7 @@ WHERE year=XXXX
 AND (demand_scenario_id,ntndp_zone_id, technology_type_id) in (
   SELECT MAX(demand_scenario_id), ntndp_zone_id, technology_type_id
   FROM capex
-  WHERE demand_scenario_id IN (3,1)
+  WHERE demand_scenario_id IN (4,1)
   AND (ntndp_zone_id, technology_type_id) IN
   [hybtechdb]
   GROUP BY ntndp_zone_id,technology_type_id
