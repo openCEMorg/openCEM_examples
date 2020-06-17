@@ -1,0 +1,11 @@
+year,name,zone_source,zone_dest,value
+2025,intercon_cap_exo,5,13,750
+2025,intercon_cap_exo,13,5,750
+2020,intercon_cap_exo,8,3,460
+2020,intercon_cap_exo,3,8,190
+2023,intercon_cap_exo,3,8,378
+2020,intercon_cap_exo,12,5,170
+2035,intercon_cap_exo,12,5,2100
+2035,intercon_cap_exo,5,12,1800
+2025,intercon_cap_exo,15,10,100
+2025,intercon_cap_exo,10,15,100
