@@ -200,7 +200,7 @@ FROM wind_and_solar_traces
 WHERE timestamp [timerange]
 AND MINUTE(timestamp)=0
 AND (ntndp_zone_id, technology_type_id) IN [gentechdb]
-AND source_id = 3 and financial_year = XXXX and reference_year = 2019
+AND source_id = 3 and financial_year = XXXX and reference_year = 2014
 GROUP BY ntndp_zone_id, technology_type_id, timestamp;" : [zones,all_tech,t] gen_cap_factor;
 
 # Hybrid tech capacity factor, reroute CSP to opencem_community
