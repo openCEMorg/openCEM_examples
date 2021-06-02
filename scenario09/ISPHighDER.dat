@@ -49,14 +49,14 @@ user=select password=select_password1 using=pymysql
 query="SELECT cap.ntndp_zone_id AS zones, cap.technology_type_id AS all_tech, avg(fuel.price) as cost_fuel
 FROM fuel_price fuel
 INNER JOIN capacity cap ON cap.id=fuel.capacity_id
-WHERE fuel.year=XXXX AND fuel.fuel_scenario_id =9
+WHERE fuel.year=XXXX AND fuel.fuel_scenario_id =7
 AND (cap.ntndp_zone_id,cap.technology_type_id) in
 [fueltechdb]
 group by zones,all_tech
 UNION ALL
 SELECT ntndp_zone_id AS zones, technology_type_id AS all_tech, avg(price) as cost_fuel
 FROM fuel_price_new
-WHERE year=XXXX AND fuel_scenario_id =9
+WHERE year=XXXX AND fuel_scenario_id =7
 AND (ntndp_zone_id, technology_type_id) in
 [fueltechdb]
 group by zones,all_tech;" :[zones,all_tech] cost_fuel;
@@ -84,7 +84,7 @@ format=set
 query="SELECT DISTINCT CAST(timestamp AS CHAR)
 FROM demand_and_rooftop_traces
 WHERE timestamp [timerange]
-AND demand_scenario_id=6
+AND demand_scenario_id=9
 AND MINUTE(timestamp)=0 AND reference_year=2014 order by timestamp;" :t;
 
 # Build costs for gentech
@@ -110,7 +110,7 @@ load "opencem-isp2020.cyisekdyolmb.ap-southeast-2.rds.amazonaws.com" database=op
 user=select password=select_password1 using=pymysql
 query="SELECT technology_type_id as all_tech, capex as build_cost
 FROM isp_capex
-WHERE source_id in (3,4) and year = XXXX and build_cost_scenario_id = 6
+WHERE source_id in (3,4) and year = XXXX and build_cost_scenario_id = 9
 and technology_type_id in ([alltechlist])" : [all_tech] build_cost;
 
 
@@ -201,7 +201,7 @@ FROM wind_and_solar_traces
 WHERE timestamp [timerange]
 AND MINUTE(timestamp)=0
 AND (ntndp_zone_id, technology_type_id) IN [gentechdb]
-AND source_id = 3 and financial_year = XXXX and reference_year = 2019
+AND source_id = 3 and financial_year = XXXX and reference_year = 2014
 GROUP BY ntndp_zone_id, technology_type_id, timestamp;" : [zones,all_tech,t] gen_cap_factor;
 
 # Hybrid tech capacity factor, reroute CSP to opencem_community
@@ -222,6 +222,6 @@ query="SELECT cast(timestamp AS CHAR) AS t, region_id AS regions, opso_poe10 AS 
 FROM demand_and_rooftop_traces
 WHERE timestamp [timerange]
 AND MINUTE(timestamp)=0
-AND demand_scenario_id =6
+AND demand_scenario_id =9
 AND region_id in ([regionslist]) AND reference_year=2014
 order BY regions,t;": [regions,t] region_net_demand;
