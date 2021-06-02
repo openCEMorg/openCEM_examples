@@ -1,0 +1,11 @@
+year,name,zone_source,zone_dest,value, comments
+2022,intercon_cap_exo,8,3,150, QNI option 1A (QNI Minor)
+2022,intercon_cap_exo,3,8,215, QNI option 1A (QNI Minor)
+2022,intercon_cap_exo,12,5,170, VIC-NSW option 1 (VNI minor)
+2022,intercon_cap_exo,5,12,0, VIC-NSW option 1 (VNI minor)
+2024,intercon_cap_exo,5,13,800, EnergyConnect
+2024,intercon_cap_exo,13,5,800, EnergyConnect
+2024,intercon_cap_exo,15,10,100,Increased Heywood thermal limits due to EnergyConnect
+2024,intercon_cap_exo,10,15,100,Increased Heywood thermal limits due to EnergyConnect
+2025,intercon_cap_exo,5,6,2230, Humelink
+2025,intercon_cap_exo,6,7,2230, Humelink
